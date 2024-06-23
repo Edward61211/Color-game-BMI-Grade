@@ -1,1 +1,1 @@
-# Color-game-BMI-Grade
+# Color game / BMI calculator / Grade calculator 
