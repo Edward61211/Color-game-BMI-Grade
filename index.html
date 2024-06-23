@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Game</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+
+  <body
+    class="flex min-h-screen w-full items-center justify-center from-gray-600 via-purple-400 to-pink-400 bg-gradient-to-tl"
+  >
+    <div class="w-full h-full flex flex-row max-lg:flex-col justify-around">
+      <div
+        class="cursor-pointer grid grid-rows-2 grid-cols-2 gap-0.5 w-[600px] h-[600px] bg-white rounded-lg"
+      >
+        <div class="bg-gray-500 box rounded-lg" id="startingBox1"></div>
+        <div class="bg-gray-500 box rounded-lg" id="startingBox2"></div>
+        <div class="bg-gray-500 box rounded-lg" id="startingBox3"></div>
+        <div class="bg-gray-500 box rounded-lg" id="startingBox4"></div>
+      </div>
+      <!-- right side  -->
+      <div class="flex flex-col h-full">
+        <h1 class="text-5xl font-bold text-center">Color Game</h1>
+        <!-- countdown -->
+        <div class="flex items-center justify-center mt-5">
+          <div class="grid grid-flow-col gap-0.5 text-center auto-cols-max">
+            <div
+              class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+            >
+              <span class="countdown font-mono text-4xl">
+                <span id="days" style="--value: 77"></span>
+              </span>
+              days
+            </div>
+            <div
+              class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+            >
+              <span class="countdown font-mono text-4xl">
+                <span id="hours" style="--value: 77"></span>
+              </span>
+              hours
+            </div>
+            <div
+              class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+            >
+              <span class="countdown font-mono text-4xl">
+                <span id="minutes" style="--value: 77"></span>
+              </span>
+              min
+            </div>
+            <div
+              class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content"
+            >
+              <span class="countdown font-mono text-4xl">
+                <span id="seconds" style="--value: 77"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col mt-5">
+          <button
+            id="level-btn"
+            class="btn btn-primary hover:btn-error text-2xl"
+          >
+            Game Level 2 x 2
+          </button>
+          <button
+            id="reset-btn"
+            class="btn btn-warning hover:btn-error text-2xl mt-5"
+          >
+            Restart
+          </button>
+          <button
+            id="answer-btn"
+            class="btn btn-warning hover:btn-error text-2xl mt-5"
+          >
+            Answer
+          </button>
+          <button
+            data-popover-target="popover-bottom"
+            data-popover-placement="bottom"
+            type="button"
+            class="text-white mt-5 h-12 w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-2xl px-5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Game Rule
+          </button>
+          <div
+            data-popover
+            id="popover-bottom"
+            role="tooltip"
+            class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+          >
+            <div
+              class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+            >
+              <h3 class="font-semibold text-gray-900 dark:text-white">
+                Anouncement
+              </h3>
+            </div>
+            <div class="px-3 py-2">
+              <p>
+                🚨 Welcome to the Color Game! Pick the box with a different
+                color from the rest. The level increases with more boxes.
+                However, choose the wrong box, the game resets. Have fun!
+              </p>
+            </div>
+            <div data-popper-arrow></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/color.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>

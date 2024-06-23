@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link href="../src/output.css" rel="stylesheet" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body class="flex h-full w-full bg-black justify-center">
+    <div class="flex flex-col gap-4">
+      <div class="glass text-center text-3xl text-teal-300">
+        Grade Calculator
+      </div>
+      <textarea
+        id="input1"
+        class="textarea textarea-error"
+        placeholder="Chinese"
+        oninput="validateInput(this)"
+      ></textarea>
+      <textarea
+        id="input2"
+        class="textarea textarea-error"
+        placeholder="English"
+        oninput="validateInput(this)"
+      ></textarea>
+      <textarea
+        id="input3"
+        class="textarea textarea-error"
+        placeholder="Math"
+        oninput="validateInput(this)"
+      ></textarea>
+      <textarea
+        id="input4"
+        class="textarea textarea-error"
+        placeholder="Physics"
+        oninput="validateInput(this)"
+      ></textarea>
+      <textarea
+        id="input5"
+        class="textarea textarea-error"
+        placeholder="Chemistry"
+        oninput="validateInput(this)"
+      ></textarea>
+      <div>
+        <button id="output1" class="btn btn-info">Display</button>
+        <button id="output2" class="btn btn-info">Display</button>
+        <button id="output3" class="btn btn-info">Display</button>
+        <button id="output4" class="btn btn-info">Display</button>
+      </div>
+      <button id="calculateButton" class="btn btn-primary">Calculate!</button>
+    </div>
+    <script src="../src/index.js"></script>
+  </body>
+</html>
